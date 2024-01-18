@@ -29,7 +29,7 @@ resource "aws_instance" "web-1" {
               sudo touch /home/ansibleadmin/.ssh/authorized_keys
               sudo usermod -aG sudo ansibleadmin
               echo 'ansibleadmin ALL=(ALL) NOPASSWD: ALL' | sudo tee -a /etc/sudoers
-              echo 'place-generated-publikey-from-ansible-controller' | sudo tee -a /home/ansibleadmin/.ssh/authorized_keys
+              echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCcopjFriAursnz/ZLd8/bYOAGbmVQWMYCpfKD1D8aZuKltw4vDCA9oj8VZmTQm3niFuDmIomkeHXuixDx/6WIugR1il38So2nApBtFn84iAJTtEzUc/eqED+DDTH9pnGAfJOPT6gV/1Y6cx29Uqfn0HZO2I+r3mKdSszMI79+8M9vM+sDauO8Nf1WgEWF5jqAK4LrQ6esqaJpE/96OWsTsR8thhGS1X/tJ0Cr/vIzpCgfmaVtjqGbLdtY3b2lypzkeVJlcOgkYutb/HYX5M9bUOy6AKq43gfB9ozf5fyqPytMZHHxNLxWQE9/GGj13UkIYOlWgbsim5ZUiNZ7Kw99KKydOmjqXjhT6KzSNwVYa/H/kLu6T4og3/Sjuq+wuYYTmEaFXNv9Tha+HpwYNk/QOEV7raNEG9eFxTrzFFIlurxadwb2jOKPF6tfr85BgWhG+57MMBYJoaNzCTiWGLUNqTnSxDLOul1ZuFljZ9YydE8rVgPkHEkTgIxR5WEJek8k= ansibleadmin@ip-10-0-0-11' | sudo tee -a /home/ansibleadmin/.ssh/authorized_keys
               EOF
 }
 
@@ -56,7 +56,7 @@ resource "aws_instance" "web-2" {
               sudo touch /home/ansibleadmin/.ssh/authorized_keys
               sudo usermod -aG sudo ansibleadmin
               echo 'ansibleadmin ALL=(ALL) NOPASSWD: ALL' | sudo tee -a /etc/sudoers
-              echo 'place-generated-publikey-from-ansible-controller' | sudo tee -a /home/ansibleadmin/.ssh/authorized_keys
+              echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCcopjFriAursnz/ZLd8/bYOAGbmVQWMYCpfKD1D8aZuKltw4vDCA9oj8VZmTQm3niFuDmIomkeHXuixDx/6WIugR1il38So2nApBtFn84iAJTtEzUc/eqED+DDTH9pnGAfJOPT6gV/1Y6cx29Uqfn0HZO2I+r3mKdSszMI79+8M9vM+sDauO8Nf1WgEWF5jqAK4LrQ6esqaJpE/96OWsTsR8thhGS1X/tJ0Cr/vIzpCgfmaVtjqGbLdtY3b2lypzkeVJlcOgkYutb/HYX5M9bUOy6AKq43gfB9ozf5fyqPytMZHHxNLxWQE9/GGj13UkIYOlWgbsim5ZUiNZ7Kw99KKydOmjqXjhT6KzSNwVYa/H/kLu6T4og3/Sjuq+wuYYTmEaFXNv9Tha+HpwYNk/QOEV7raNEG9eFxTrzFFIlurxadwb2jOKPF6tfr85BgWhG+57MMBYJoaNzCTiWGLUNqTnSxDLOul1ZuFljZ9YydE8rVgPkHEkTgIxR5WEJek8k= ansibleadmin@ip-10-0-0-11' | sudo tee -a /home/ansibleadmin/.ssh/authorized_keys
               EOF
 }
 
@@ -83,7 +83,7 @@ resource "aws_instance" "web-3" {
               sudo touch /home/ansibleadmin/.ssh/authorized_keys
               sudo usermod -aG sudo ansibleadmin
               echo 'ansibleadmin ALL=(ALL) NOPASSWD: ALL' | sudo tee -a /etc/sudoers
-              echo 'place-generated-publikey-from-ansible-controller' | sudo tee -a /home/ansibleadmin/.ssh/authorized_keys
+              echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCcopjFriAursnz/ZLd8/bYOAGbmVQWMYCpfKD1D8aZuKltw4vDCA9oj8VZmTQm3niFuDmIomkeHXuixDx/6WIugR1il38So2nApBtFn84iAJTtEzUc/eqED+DDTH9pnGAfJOPT6gV/1Y6cx29Uqfn0HZO2I+r3mKdSszMI79+8M9vM+sDauO8Nf1WgEWF5jqAK4LrQ6esqaJpE/96OWsTsR8thhGS1X/tJ0Cr/vIzpCgfmaVtjqGbLdtY3b2lypzkeVJlcOgkYutb/HYX5M9bUOy6AKq43gfB9ozf5fyqPytMZHHxNLxWQE9/GGj13UkIYOlWgbsim5ZUiNZ7Kw99KKydOmjqXjhT6KzSNwVYa/H/kLu6T4og3/Sjuq+wuYYTmEaFXNv9Tha+HpwYNk/QOEV7raNEG9eFxTrzFFIlurxadwb2jOKPF6tfr85BgWhG+57MMBYJoaNzCTiWGLUNqTnSxDLOul1ZuFljZ9YydE8rVgPkHEkTgIxR5WEJek8k= ansibleadmin@ip-10-0-0-11' | sudo tee -a /home/ansibleadmin/.ssh/authorized_keys
               EOF
 }
 
