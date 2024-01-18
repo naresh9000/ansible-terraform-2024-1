@@ -1,0 +1,31 @@
+-------------------------------Ansible-AdHoc-Commands-----------
+**ansible -i invfile  webservers -m hostname -a "name=webserver1" --become  =>changes the hostname
+**ansible -i invfile  appservers -m hostname -a "name=appserver1" --become
+**ansible -i invfile  dbservers -m hostname -a "name=dbserver1" --become
+#after changing the hostnames only it gets reflect after reboot
+1)ansible -i invfile -m shell -a reboot --become
+2)ansible -i invfile all -m setup | grep -i ansible_hostname
+**ansible -i invfile -m file -a 'path=/tmp/testfile1 state=touch'
+**ansible -i invfile all -m file -a 'path=/tmp/testfile1 state=touch owner=root group=root mode=0644' --become
+**ansible -i invfile all -m user -a "name=testuser1 state=present" --become
+ansible -i invfile all -m ping  =>pings all at a time
+**ansible -i invfile all -m ping -f 1 =>pings one by one
+**ansible -i invfile all -m command -a hostname
+**ansible -i invfile all -m command -a uptime
+**ansible -i invfile all -m command -a free
+**ansible -i invfile all -m command -a df -h
+**ansible -i invfile all  -a "cat /etc/passwd"
+**ansible -i invfile servers:app  -a free --limit machine2
+**ansible -i invfile all -a uptime --limit servers
+**ansible -i invfile prod -a free (clildren as app & servers)
+**ansible -i invfile 'servers:!app' -a free
+**ansible -i invfile 'sertp' -a free
+**ansible -i invfile servers[0] -a uptime
+**ansible -i invfile servers[0:2] -a uptime
+**ansible -i invfile servers[2:] -a uptime
+**ansible -i invfile  servers -m user -a "user=testuser password=$1$pGP3ICXv$6PEDQI/N1RgLzVr/l00YY0"
+**ansible -i invfile all -m setup  => will get the all the info about the servers individually
+**ansible app -s -a "yum install -y docker-engine"
+**ansible app -s -m group -a "name=admin state=present"
+**ansible app -s -m user -a "name=devops group=admin createhome=yes"
+**ansible app -m copy -a "src=/vagrant/test.txt dest=/tmp/test.txt"
